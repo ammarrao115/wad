@@ -1,0 +1,51 @@
+.col
+{
+    text-align: center;
+    display: inline;
+    width: 100%;
+}
+.col:hover
+{
+    border-width: 5px;
+    border-style: solid;
+}
+
+.h1
+{
+    text-align: center;
+    padding: 20px;
+    background-color: #0f2b3d;
+    color: red;
+}
+
+@media only screen and (min-width: 600px)
+{
+    .col
+    {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 800px)
+{
+    .col
+    {
+        width: 33.33%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .col
+    {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1200px)
+{
+    .col
+    {
+        width: 20%;
+    }
+}

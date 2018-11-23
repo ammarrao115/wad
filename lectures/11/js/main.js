@@ -10,6 +10,8 @@ function add() {
     document.getElementById('todos').innerText = todos;
 }*/
 
+/*Ans: elements are displayed in single line with a comma between them*/
+
 
 //============================================
 //-----------  STEP - 2 ----------------------
@@ -35,6 +37,8 @@ function show() {
     }
     document.getElementById('todos').appendChild(ul);
 }*/
+
+/*Ans:  elements are shown in table. it save elements when i add a new element but when i refresh page it all data clear i.e. not saved  */
 
 
 //============================================
@@ -86,7 +90,9 @@ function show() {
 show();
 */
 
+/*Ans:  elements are shown in table. it save elements when i add a new element but when i refresh page it all data saved i.e. saved   and a button is also
 
+    showed but it donot delete my data*/
 
 //============================================
 //-----------  STEP - 4 ----------------------
@@ -164,7 +170,9 @@ function isDone(e) {
 }
 show();*/
 
+/*Ans:  elements are shown in table. it save elements when i add a new element but when i refresh page it all data saved i.e. saved   and a button is also
 
+    showed and it also delete my data*/
 
 
 
@@ -185,3 +193,109 @@ HINT: use text-decoration:line-through; property of CSS
 
 */
 
+
+
+/*
+Ans: i use code of task-4 in this task and then added some new finctions to perform my task........... ;) */
+
+/*function getTodos() {
+    var todos = [];
+    var todos_str = localStorage.getItem('todo');
+    if(todos_str !== null)
+        todos = JSON.parse(todos_str);
+    return todos;
+}
+
+function add() {
+    var task = document.getElementById('task').value;
+    if(task.trim() == ''){
+        document.getElementById('message').style.display = 'block';
+        return false;
+    } else {
+        document.getElementById('message').style.display = 'none';
+    }
+    var todos = getTodos();
+    todos.push({task: task, isDone: false});
+    document.getElementById('task').value = '';
+    localStorage.setItem('todo',JSON.stringify(todos));
+    show();
+    return false;
+}
+
+function remove() {
+    var id = this.getAttribute('id');
+    var todos = getTodos();
+    todos.splice(id,1);
+    localStorage.setItem('todo',JSON.stringify(todos));
+    show();
+    return false;
+}
+function show() {
+    document.getElementById('todos').innerText = '';
+    var todos = getTodos();
+    var ul = document.createElement('ul');
+    ul.classList.add("list-group");
+    for(var i=0; i<todos.length; i++){
+        var li = document.createElement('li');
+        li.innerHTML  = '<li>' +'<p  id="\'+i+\'" onclick="strikethroug(this)">'+ todos[i].task +'</p>' +'</li>' +
+            '<button class="btn btn-danger" id="' + i + '">' +
+            '<i class="fa fa-trash-o"></i> ' +
+            '<span class="d-none d-sm-inline"> Delete </span> </button>'+
+            '<button class="btn btn-reset" id1="' + i + '">' +
+            '<i class="fa fa-trash-o"></i> ' +
+            '<span class="d-none d-sm-inline"> reset </span> </button>';
+        li.classList.add("list-group-item");
+        if(todos[i].isDone)
+            li.classList.add("done");
+        ul.appendChild(li);
+    }
+    document.getElementById('todos').appendChild(ul);
+    var buttons = document.getElementsByClassName('btn-danger');
+    var buttons2 = document.getElementsByClassName('btn-reset');
+    for(var i=0; i<buttons.length; i++){
+        buttons[i].addEventListener('click',remove);
+        buttons2[i].addEventListener('click',resetval);
+    }
+}
+
+
+function strikethroug(ele)
+{
+    var x = ele.style.color ="red";
+}
+
+
+
+function resetval(){
+    var id = this.getAttribute('id1');
+    var task = document.getElementById('task').value;
+    if(task.trim() == ''){
+        document.getElementById('message').style.display = 'block';
+        return false;
+    } else {
+        document.getElementById('message').style.display = 'none';
+    }
+    var todos = getTodos();
+    todos.splice(id,1);
+    todos.push({task: task, isDone: false});
+    localStorage.setItem('todo',JSON.stringify(todos));
+    show();
+    return false;
+}
+
+
+
+function isDone(e) {
+    var todos = getTodos();
+    if (todos[e.target.id].isDone) {
+        e.target.classList.add('done');
+        todos[e.target.id].isDone = false;
+    }
+    else {
+        e.target.classList.remove('done');
+        todos[e.target.id].isDone = true;
+    }
+    localStorage.setItem('todo', JSON.stringify(todos));
+    show();
+
+}*/
