@@ -2,7 +2,7 @@ var questions = [{
     question : "When a user views a page containing a JavaScript program, which machine actually executes the script?",
     choices : [ "The User's machine running a Web browser",
         "The Web server",
-        "A central machine deep within Netscape's corporate offices",
+        "A central machine deep within Netscape's cor   porate offices",
         "None of the above"],
     correctAnswer : 0
 },{
@@ -28,10 +28,47 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+
+    var ans = document.querySelector("input[type = radio]:checked");
+
+    if(ans == null)
+    {
+        var msg_relay = document.getElementById("quiz-message");
+        msg_relay.style.color = 'blue';
+        msg_relay.style.display = "block";
+        msg_relay.innerText = "first select an option";
+    }
+    else if(ans.question[currentQuestion].correctAnswer )
+    {
+        correctAnswers++;
+        currentQuestion++;
+        displayCurrentQuestion();
+    }
+    else
+    {
+        currentQuestion++;
+        displayCurrentQuestion();
+    }
+
+
+
 }
 
 function displayCurrentQuestion() {
     /*Write your code here */
+
+
+    var questionId = document.getElementById("question");
+
+    questionId.innerHTML = '<p>' + questions[currentQuestion].question +  '</p>';
+
+    var choiseId = document.getElementById("choice-list");
+
+    for(var i = 0 ; i < questions[currentQuestion].choices.length ; i++)
+    {
+        choiseId.innerHTML += '<li>'+ '<input type="radio" name="checked">' + questions[currentQuestion].choices[i] +'</li>'
+    }
+
 }
 
 function resetQuiz() {
