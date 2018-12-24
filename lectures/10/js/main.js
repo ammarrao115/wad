@@ -1,33 +1,30 @@
-/*function  showAlertBox() {
+function  showAlertBox() {
     alert("Display Message")
-}*/
+}
 
 
-/*
 function  displayName(name) {
     alert("My Name is " + name);
 }
-*/
-/* Parameter vs Argument */
-/*function  show Message() {
+/* Parameter vs Argument*/
+function  showMessage() {
     console.log("A message to the console");
-}*/
+}
 
 
-/*function sum() {
+function sum() {
     var n1 = 5;
     var n2 = 3;
     var sum = n1 + n2;
     alert("Sum is "+ sum);
-}*/
+}
 
 
-/*function multiply(a,b) {
+function multiply(a,b) {
     var result = a * b;
     alert("Result: " + result);
-}*/
+}
 
-/*
 expo();
 function expo() {
     var a = 2;
@@ -36,8 +33,7 @@ function expo() {
     alert(typeof a);
     alert(a);
 }
-*/
-//global Var
+/*//global Var*/
 var category = "electronics";
 //dt();
 function dt() {
