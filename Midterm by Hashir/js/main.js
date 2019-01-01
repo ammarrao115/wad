@@ -71,7 +71,7 @@ function prevProfile() {
 //Question 2
 function viewComments()
 {
-    var comments = document.getElementById("comment-list");
+        var comments = document.getElementById("comment-list");
     comments.innerText = "";
 
     for (var i = profiles[CurrentIndex].commentsArray.length - 1; i >= 0 ; i--) {
