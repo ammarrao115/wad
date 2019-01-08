@@ -67,7 +67,7 @@ require "server/functions.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                    <?php getCats(); ?>
+                    <?php fetchCategories(); ?>
                 </ul>
             </li>
             <li class="active">
@@ -76,7 +76,7 @@ require "server/functions.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php getBrands(); ?>
+                    <?php fetchBrands(); ?>
                 </ul>
             </li>
             <li>
