@@ -1,6 +1,8 @@
 <?php
 require  "db_connection.php";
 
+                    /*this work of lec i missed and done after*/
+
 if(isset($_POST['insert_pro']))
 {
     $pro_title = $_POST['pro_title'];
@@ -19,6 +21,8 @@ if(isset($_POST['insert_pro']))
     }
 }
 ?>
+
+                    <!--this is from sir-->
 
 <!DOCTYPE html>
 <html lang="en">
