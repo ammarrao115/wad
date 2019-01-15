@@ -35,7 +35,7 @@ if(isset($_POST['insert_pro']))
 
 
 
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
     <style>
